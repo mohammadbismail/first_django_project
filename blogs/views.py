@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse, redirect
+from django.http import JsonResponse
 
 
 def root(request):
@@ -18,4 +19,17 @@ def create(request):
 
 
 def show(request, num):
-    return HttpResponse(num)
+    return HttpResponse("placeholder to display blog number {{num}}")
+
+
+def edit(request, num):
+    return HttpResponse("placeholder to edit blog {{num}}")
+
+
+def destroy(request, num):
+    return redirect("/blogs/")
+
+
+def json(request):
+    responsedata = {"title": "my first blog", "content": "leorem"}
+    return JsonResponse(responsedata)
