@@ -19,11 +19,11 @@ def create(request):
 
 
 def show(request, num):
-    return HttpResponse("placeholder to display blog number {{num}}")
+    return HttpResponse(f"placeholder to display blog number {num}")
 
 
 def edit(request, num):
-    return HttpResponse("placeholder to edit blog {{num}}")
+    return HttpResponse(f"placeholder to edit blog {num}")
 
 
 def destroy(request, num):
